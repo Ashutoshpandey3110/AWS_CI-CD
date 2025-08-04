@@ -1,0 +1,19 @@
+C:\Users\spyas>aws ssm put-parameter --name "/docker/registry_url" --value "docker.io" --type "SecureString"
+{
+    "Version": 1,
+    "Tier": "Standard"
+}
+
+
+C:\Users\spyas>aws ssm put-parameter --name "/docker/username" --value "ashu32" --type "SecureString"
+{
+    "Version": 1,
+    "Tier": "Standard"
+}
+
+
+C:\Users\spyas>aws ssm put-parameter --name "/docker/password" --value "ashutosh__3110" --type "SecureString"
+{
+    "Version": 1,
+    "Tier": "Standard"
+}
