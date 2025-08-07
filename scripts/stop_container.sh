@@ -3,12 +3,9 @@ set -e
 
 echo "Stopping existing Docker container (if running)..."
 
-container_id=$(docker ps -q --filter ancestor=ashu32/simple-python-flask-app)
+containerid = `docker ps | awk -F " " '{print $1}'`
 
-if [ ! -z "$container_id" ]; then
-    docker stop $container_id
-    docker rm $container_id
-    echo "Old container stopped and removed."
-else
-    echo "No container running."
-fi
+docker rm -f $containerid
+
+#above codes 1) is getting the container id
+            #2) is forcefully deleting the container id
